@@ -1,7 +1,7 @@
 # vehin
 Simple Vehicle Inventory with jQuery + REST API
 
-##Install
+## Install
 - Install XAMP from https://www.apachefriends.org/es/index.html
 
 * Open phpMyAdmin and import vehin_db.sql
@@ -11,10 +11,10 @@ Set DocumentRoot and direwctory to
 DocumentRoot "C:/xamp/htdocs/vehin"
 <Directory "C:/xamp/htdocs/vehin">
 
-##API Documentation
+## API Documentation
 - Add users to the system: (No Auth required)
 http://localhost/api/create_user.php (POST)
- Raw data required:
+Raw data required:
 ```
 {
  "firstname" : "Admin",
