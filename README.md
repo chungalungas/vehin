@@ -2,14 +2,17 @@
 Simple Vehicle Inventory with jQuery + REST API
 
 ## Install
-- Install XAMP from https://www.apachefriends.org/es/index.html
+- Install XAMP from https://www.apachefriends.org/es/index.html and Start Apache & MySQL
 
 * Open phpMyAdmin and import vehin_db.sql
 
-* Configure httpd.conf with the following:
-Set DocumentRoot and direwctory to
+* Open httpd.conf and set DocumentRoot and directory to
+```
 DocumentRoot "C:/xamp/htdocs/vehin"
 <Directory "C:/xamp/htdocs/vehin">
+```
+* Open a web browser and navigate to
+http://localhost/
 
 ## API Documentation
 ```
