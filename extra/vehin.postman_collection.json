@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "0c7a1f25-45b5-47b2-97e4-ca74c440e891",
+		"name": "vehin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost/api/create_user.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"firstname\" : \"Admin\",\r\n \"lastname\" : \"User\",\r\n \"email\" : \"admin@myemail.com\",\r\n \"password\" : \"admin\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api/create_user.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"create_user.php"
+					]
+				},
+				"description": "Adds a user to the vehin_db for further authentication"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/api/login.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"email\" : \"admin@myemail.com\",\r\n \"password\" : \"admin\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api/login.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"login.php"
+					]
+				},
+				"description": "Use to get the jwt hash for future authentication to API calls"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/api/validate_token.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"jwt\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NDU0NzgwMjEsImV4cCI6MTY0NTQ3ODMyMSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdC9hcGkvIiwiZGF0YSI6eyJpZCI6IjEyIiwiZmlyc3RuYW1lIjoiVXNlciA3IiwibGFzdG5hbWUiOiJUZXN0IiwiZW1haWwiOiJ0dXNlcjdAbXllbWFpbC5jb20ifX0.ghdM7S5icsGWm9EnK3cKRxllObSaNGFYO5f_sBRJ7jE\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api/validate_token.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"validate_token.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/api/add_sedan.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"jwt\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NDU0NjU0OTEsImV4cCI6MTY0NTQ2NTc5MSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdC9hcGkvIiwiZGF0YSI6eyJpZCI6IjEyIiwiZmlyc3RuYW1lIjoiVXNlciA3IiwibGFzdG5hbWUiOiJUZXN0IiwiZW1haWwiOiJ0dXNlcjdAbXllbWFpbC5jb20ifX0.QMXDR6zMJEn0IKKceDVQAdPvNtrQ0b5yN46YnAfcrro\",\r\n    \"hp\": \"88\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api/add_sedan.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"add_sedan.php"
+					]
+				},
+				"description": "Adds a sedan type vehicle"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/api/add_bike.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hp\": \"17\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api/add_bike.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"add_bike.php"
+					]
+				},
+				"description": "Adds a bike type vehicle"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/api/vehicle_inventory.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"jwt\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NDU0NzU4ODUsImV4cCI6MTY0NTQ3NjE4NSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdC9hcGkvIiwiZGF0YSI6eyJpZCI6IjEyIiwiZmlyc3RuYW1lIjoiVXNlciA3IiwibGFzdG5hbWUiOiJUZXN0IiwiZW1haWwiOiJ0dXNlcjdAbXllbWFpbC5jb20ifX0.Mu_PSHk43et6bo8UlQVo07AfDspBpmZf2OkgvEFqGmU\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api/vehicle_inventory.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"vehicle_inventory.php"
+					]
+				},
+				"description": "Retrieves inventory summary & detail"
+			},
+			"response": []
+		}
+	]
+}
